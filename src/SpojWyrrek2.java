@@ -19,24 +19,15 @@ public class SpojWyrrek2 {
     }
 
 
-    public static List <String> listCreator (String tmp){
-        List<String> userInput = new LinkedList<>();
-        Scanner scanner = new Scanner(System.in);
-        userInput.add(tmp);
-
-        if (scanner.hasNextLine())
-            listCreator(scanner.nextLine());
-
-    return userInput;
-    }
-
     public static void main (String[] args) {
-        int counter = 0;
+        List<String> userInput = new LinkedList<>();
         Scanner scanner = new Scanner(System.in);
 
         if (scanner.hasNextLine()){
-            listCreator(scanner.nextLine());
+            String tmp = scanner.nextLine();
+            userInput.add(tmp);
         }
+
 
 
 

@@ -4,14 +4,15 @@ import java.util.Scanner;
 
 public class SpojWyrrek3 {
 
-    public static List<String> listCreator (String tmp, List <String> userInput){
-        Scanner scanner = new Scanner(System.in);
-        userInput.add(tmp);
+    public static void odwracam (List <String> lista){
 
-        if (scanner.hasNextLine()){
-            listCreator(scanner.nextLine(), userInput);}
+        if (!lista.isEmpty()){
+            int ostatni = ((lista.size())-1);
+            System.out.println(lista.get(ostatni));
+            lista.remove(ostatni);
+            odwracam(lista);
 
-        return userInput;
+        }
     }
 
 
@@ -21,12 +22,12 @@ public class SpojWyrrek3 {
         List<String> userInput = new LinkedList<>();
 
 
-        if (scanner.hasNextLine()){
-            listCreator(scanner.nextLine(), userInput);
+        while (scanner.hasNextLine()){
+            userInput.add(scanner.nextLine());
         }
         scanner.close();
 
-
+        odwracam(userInput);
     }
 
 }
