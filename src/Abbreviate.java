@@ -1,5 +1,8 @@
 public class Abbreviate {
 
+    //creates abbreviation
+    //tested
+
     public static String abbrev (String name){
 
         String [] tab = name.split(" ");
