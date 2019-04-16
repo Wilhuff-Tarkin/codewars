@@ -4,17 +4,13 @@ public class SudokuValidator {
 
     private static boolean check(int[][] sudoku) {
 
-        if (checkSize(sudoku)){
-            int rowCorrectionPoints = checkEachRow(sudoku);
-            int columnCorrectionPoints = checkEachColumn(sudoku);
-            System.out.println((rowCorrectionPoints + columnCorrectionPoints) == 18);
-            return (rowCorrectionPoints + columnCorrectionPoints) == 18;}
-        else return false;
-
+        boolean result;
+        result = checkEachRow(sudoku) && checkEachColumn(sudoku) ;
+return result;
     }
 
 
-    private static int checkEachRow(int[][] tab) {
+    private static boolean checkEachRow(int[][] tab) {
 
 
         int [] toBeChecked = new int [9];
@@ -25,15 +21,12 @@ public class SudokuValidator {
                 toBeChecked [j] = tab [i][j];
             }
 
-//            System.out.println("toBeChecked = " + Arrays.toString(toBeChecked));
-//            System.out.println(sortAndCount(toBeChecked));
             if (sortAndCount(toBeChecked)) points +=1;
         }
-
-        return points;
+        return points == 9;
     }
 
-    private static int checkEachColumn(int[][] tab) {
+    private static boolean checkEachColumn(int[][] tab) {
         int[] toBeChecked = new int[9];
         int points = 0;
 
@@ -42,12 +35,10 @@ public class SudokuValidator {
                 toBeChecked[j] = tab[j][i];
             }
 
-//            System.out.println("toBeChecked = " + Arrays.toString(toBeChecked));
-//            System.out.println(sortAndCount(toBeChecked));
             if (sortAndCount(toBeChecked)) points += 1;
         }
 
-        return points;
+        return points == 9;
 
     }
 
@@ -61,6 +52,13 @@ public class SudokuValidator {
             return false;
         }
 
+    }
+
+    private static boolean checkThrees (int [][] tab) {
+
+
+
+        return false;
     }
 
     private static boolean checkSize(int[][] multi) {
@@ -83,8 +81,7 @@ public class SudokuValidator {
                 { 3, 4, 5, 2, 8, 6, 1, 7, 9 }
         };
 
-        if (checkSize(multi)) check(multi);
-
+        check(multi);
     }
 
 

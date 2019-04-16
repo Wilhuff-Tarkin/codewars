@@ -1,4 +1,5 @@
 public class Accumul {
+
     public static String accum(String s) {
         StringBuilder stb = new StringBuilder();
 
@@ -12,11 +13,7 @@ public class Accumul {
             }
             return stb.toString().substring(0,stb.length()-1); //substring from indexes between zero (inclusive) and last index (exclusive)
 
-
         }
-
-
-        //  s.charAt(s.length()-1)
 
 
         public static void main (String[]args){

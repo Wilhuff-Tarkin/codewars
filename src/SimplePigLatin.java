@@ -3,6 +3,7 @@
 
 //igPay atinlay siay oolcay
 
+import javax.xml.stream.events.Characters;
 import java.util.Arrays;
 
 public class SimplePigLatin {
@@ -12,9 +13,11 @@ public class SimplePigLatin {
 
         for (int i = 0; i < array.length ; i++) {
             String s = array [i];
+            if (Character.isLetter(s.charAt(0))){
             char tmp = s.charAt(0);
             String tmp_string = s.substring(1);
-            array [i] = tmp_string + tmp + "ay";
+            array [i] = tmp_string + tmp + "ay";}
+
         }
 
         return String.join(" ", array);
