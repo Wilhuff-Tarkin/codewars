@@ -9,55 +9,48 @@ public class DirectionReduction {
             List<String> result = new LinkedList<>();
 
 
-            for (int i = 0; i < arr.length ; i++) {
+            for (int i = 0; i < arr.length-1 ; i++) {
                 if (arr[i].equals("NORTH")) {
-                    for (int j = 0; j < arr.length; j++) {
-                        if (arr[j].equals("SOUTH")) {
+                        if (arr[i+1].equals("SOUTH")) {
+                            arr[i+1] = " ";
                             arr[i] = " ";
-                            arr[j] = " ";
                             break;
                         }
                     }
                 }
-            }
-            for (int i = 0; i < arr.length ; i++) {
+
+            for (int i = 0; i < arr.length-1 ; i++) {
                 if (arr[i].equals("SOUTH")) {
-                    for (int j = 0; j < arr.length; j++) {
-                        if (arr[j].equals("NORTH")) {
-                            arr[i] = " ";
-                            arr[j] = " ";
-                            break;
-
-                        }
+                    if (arr[i+1].equals("NORTH")) {
+                        arr[i+1] = " ";
+                        arr[i] = " ";
+                        break;
+                    }
                     }
                 }
-            }
 
-            for (int i = 0; i < arr.length ; i++) {
+
+            for (int i = 0; i < arr.length-1 ; i++) {
                 if (arr[i].equals("WEST")) {
-                    for (int j = 0; j < arr.length; j++) {
-                        if (arr[j].equals("EAST")) {
-                            arr[i] = " ";
-                            arr[j] = " ";
-                            break;
-
-                        }
+                    if (arr[i+1].equals("EAST")) {
+                        arr[i+1] = " ";
+                        arr[i] = " ";
+                        break;
+                    }
                     }
                 }
-            }
 
-            for (int i = 0; i < arr.length ; i++) {
+
+            for (int i = 0; i < arr.length-1 ; i++) {
                 if (arr[i].equals("EAST")) {
-                    for (int j = 0; j < arr.length; j++) {
-                        if (arr[j].equals("WEST")) {
-                            arr [i] = " ";
-                            arr [j] = " ";
-                            break;
-
-                        }
+                    if (arr[i+1].equals("WEST")) {
+                        arr[i+1] = " ";
+                        arr[i] = " ";
+                        break;
+                    }
                     }
                 }
-        }
+
 
 
             for (String s : arr) {
@@ -69,6 +62,7 @@ public class DirectionReduction {
 
 
             System.out.println("result = " + result);
+
             return result.toArray(new String[result.size()]);
 
 
@@ -76,7 +70,7 @@ public class DirectionReduction {
 
     public static void main(String[] args) {
        // String [] dir = {"NORTH", "NORTH", "NORTH", "SOUTH", "WEST", "WEST", "EAST", "EAST", "WEST", "EAST", "SOUTH", "WEST"};
-        String [] dir = {"NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"};
+        String [] dir = {"NORTH", "WEST", "SOUTH", "EAST"};
         dirReduc(dir);
     }
     }
