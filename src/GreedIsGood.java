@@ -76,7 +76,7 @@ public class GreedIsGood {
 
 
     public static void main(String[] args) {
-        int [] tab = {5, 5, 5, 5, 1};
+        int [] tab = {5, 5, 5, 5, 1, 1};
         System.out.println(greedy(tab));
 
     }
