@@ -1,3 +1,9 @@
+/*
+Last time he did these calculations he caught a headache so could you help John?
+Your function wallpaper(l, w, h) should return as a plain English word in lower case the number of rolls he must buy.
+ */
+
+
 public class EasyWallpaper {
 
     public static String wallpaper(double l, double w, double h) {
@@ -75,9 +81,9 @@ public class EasyWallpaper {
                 numberOfRollsEn = "twenty";
                 break;
         }
-
         return numberOfRollsEn;
     }
+
     public static void main(String[] args) {
         System.out.println(wallpaper(4,3.5, 3));
         System.out.println(wallpaper(6.3, 4.5, 3.29));

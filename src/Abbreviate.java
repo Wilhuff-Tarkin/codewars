@@ -1,7 +1,6 @@
 public class Abbreviate {
 
-    //creates abbreviation
-    //tested
+    //creates names abbreviation in form "A.K"
 
     public static String abbrev (String name){
 

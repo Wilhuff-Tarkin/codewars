@@ -1,3 +1,7 @@
+//
+// very boring - todo
+//
+
 public class Butelka {
     private double ileLitrow;
     private double pojemnosc;

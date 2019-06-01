@@ -7,11 +7,11 @@ public class DigitalRoot {
     public static int digital_root(int n) {
         return 1 + (n-1) % 9;
 
-        //got lost in recursion found this formula on wikipedia
+        //got lost in recursion & found this formula on wikipedia
     }
 
 
     public static void main(String[] args) {
-        System.out.println(digital_root(128));
+        System.out.println(digital_root(128)); // should be 2  1+2=3 3+8=11 1+1=2
     }
 }

@@ -1,12 +1,12 @@
+// Your task is to make a function that can take any non-negative integer as a argument and return it with its digits in descending order.
+// Essentially, rearrange the digits to create the highest possible number.
+
 import java.util.Arrays;
 
 public class DescendingOrder {
 
-    public static void main(String[] args) {
-        sortDesc(74985);
-    }
 
-    public static int sortDesc(final int num){
+    private static int sortDesc(final int num){
         String numToString = String.valueOf(num);
         char[] toCharArray = numToString.toCharArray();
         Arrays.sort(toCharArray);
@@ -29,4 +29,9 @@ public class DescendingOrder {
 
         return result;
     }
+
+    public static void main(String[] args) {
+        sortDesc(74985);
+    }
+
 }

@@ -1,3 +1,4 @@
+//If name starts with R this person plays banjo :)
 
 public class Banjo {
     public static String areYouPlayingBanjo(String name) {

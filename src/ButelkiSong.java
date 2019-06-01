@@ -1,3 +1,5 @@
+//99 bottles on the wall song generator
+
 public class ButelkiSong {
     public static void main(String[] args) {
         int liczbaButelek = 99;

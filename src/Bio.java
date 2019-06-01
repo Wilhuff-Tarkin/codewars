@@ -1,3 +1,5 @@
+//changes DNA to RNA by replacing T to U
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 

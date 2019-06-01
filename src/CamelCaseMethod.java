@@ -1,4 +1,4 @@
-import java.util.Arrays;
+// creates CamelCase from a passed String
 
 public class CamelCaseMethod {
 
@@ -19,13 +19,10 @@ public class CamelCaseMethod {
         for (int i = 0; i < tab.length; i++) {
             stb.append(tab[i]);
         }
-
         return stb.toString();
     }
 
     public static void main(String[] args) {
-
         System.out.println(camelCase("jestem  takim sobie stringiem"));
-
     }
 }

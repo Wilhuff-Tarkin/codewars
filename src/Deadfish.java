@@ -1,3 +1,14 @@
+//Write a simple parser that will parse and run Deadfish.
+//
+//        Deadfish has 4 commands, each 1 character long:
+//
+//        i increments the value (initially 0)
+//        d decrements the value
+//        s squares the value
+//        o outputs the value into the return array
+//        Invalid characters should be ignored.
+
+
 import java.util.Arrays;
 
 public class Deadfish {
@@ -11,7 +22,6 @@ public class Deadfish {
                 arraySize += 1;
             }
         }
-
         return arraySize;
     }
 
@@ -23,7 +33,6 @@ public class Deadfish {
 
         int numberOfCommands = data.length();
         int value = 0;
-
 
         for (int i = 0; i < numberOfCommands; i++) {
             char command = data.charAt(i);
@@ -44,24 +53,12 @@ public class Deadfish {
                     break;
                 default:
                     break;
-
             }
         }
-
         return array;
     }
-
-
 
     public static void main(String[] args) {
         System.out.println(Arrays.toString(parse("iiisdoso")));
     }
-
-
-//    i increments the value (initially 0)
-//    d decrements the value
-//    s squares the value
-//    o outputs the value into the return array
-
-
 }
