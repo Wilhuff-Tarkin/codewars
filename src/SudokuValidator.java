@@ -1,12 +1,17 @@
 import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+
+//TODO right not only first 3x3 block is verified
 
 public class SudokuValidator {
 
     private static boolean check(int[][] sudoku) {
 
         boolean result;
-        result = checkEachRow(sudoku) && checkEachColumn(sudoku) ;
-return result;
+        result = checkEachRow(sudoku) && checkEachColumn(sudoku) && checkThrees(sudoku) ;
+        System.out.println("result = " + result);
+        return result;
     }
 
 
@@ -56,10 +61,27 @@ return result;
 
     private static boolean checkThrees (int [][] tab) {
 
+        List<Integer> toBeChecked = new LinkedList<>();
+        int points = 0;
+
+            for (int i = 0; i < 3; i++) {
+                for (int j = 0; j < 3; j++) {
+                    toBeChecked.add(tab[j][i]);
+                }
+            }
 
 
-        return false;
+        System.out.println(Arrays.toString(toBeChecked.toArray()));
+
+        for (int i = 1; i < 10; i++)
+               if (toBeChecked.contains(i)) {
+                   points ++;
+               }
+
+        return points == 9;
     }
+
+
 
     private static boolean checkSize(int[][] multi) {
 
